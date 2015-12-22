@@ -20,16 +20,11 @@ D'autres documents sont disponibles pour l'application DEMO :
 |Description
 |<<../techniques/index.adoc#,Spécifications_techniques>>
 |Spécification techniques du projet DEMO
-|<<../../scenariis.adoc#, Rapport cucumber >>
+|<<../scenariis.adoc#, Rapport cucumber >>
 |Rapport de scénarios du projet DEMO
-|===
-
-////
-TODO : mettre le lien vers les documents en question
-|<<../../api/index.adoc#,api_rest_docs >>
+|<<../index.adoc#,api_rest_docs >>
 |Documentation de l'API REST du projet DEMO
-
-////
+|===
 
 <<<
 == Description générale
