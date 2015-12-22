@@ -1,0 +1,36 @@
+= Projet DEMO - Documentation API REST
+================
+:author:    Yvan VU
+:data-uri:
+:icons: font
+
+== Overview
+
+Ce deocument a pour but de montrer des exemples d'appels au Web Service REST de DEMO. Ces exemples ont été générés à partir de tests automatiques.
+
+== Resources
+
+=== GET /fizzbuzz/{entier}
+
+Requête GET pour récupérer le résultat d'un fizzbuzz particulier d'un {entier} passé en paramètre de l'URL.
+
+Requête curl :
+include::{generatedDir}/fizz-buzz/curl-request.adoc[]
+
+Requête http :
+include::{generatedDir}/fizz-buzz/http-request.adoc[]
+
+Paramètres :
+include::{generatedDir}/fizz-buzz/path-parameters.adoc[]
+
+'''
+
+Réponse http :
+include::{generatedDir}/fizz-buzz/http-response.adoc[]
+
+Champs de la réponse :
+include::{generatedDir}/fizz-buzz/response-fields.adoc[]
+
+=== POST ...
+
+...

@@ -64,6 +64,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <version>1.0.0.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -96,6 +103,25 @@
                             </attributes>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>rest-api</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>src/main/asciidoc/api</sourceDirectory>
+                            <backend>html5</backend>
+                            <sourceHighlighter>highlightjs</sourceHighlighter>
+                            <attributes>
+                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                                <generatedDir>${project.build.directory}/generated-snippets</generatedDir>
+                                <data-uri/>
+                                <toc2/>
+                                <toclevels>4</toclevels>
+                            </attributes>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -114,6 +140,30 @@
                             <goal>execute</goal>
                         </goals>
                         <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <executions>
+                    <!--tests for api rest documentation-->
+                    <execution>
+                        <id>api-rest-documentation-tests</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/*RESTDocumentation.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <org.springframework.restdocs.outputDir>
+                                    ${project.build.directory}/generated-snippets
+                                </org.springframework.restdocs.outputDir>
+                            </systemPropertyVariables>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
