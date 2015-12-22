@@ -1,0 +1,19 @@
+# language: fr
+Fonctionnalité: FizzBuzz
+
+  Plan du Scénario: FizzBuzz d'entiers
+    Soit un entier <input>
+    Lorsqu'on vérifie le résultat de fizzbuzz sur cet entier
+    Alors le fizzbuzz retourne "<output>"
+
+    Exemples:
+      |  input |  output  |
+      |   2    |     2    |
+      |   3    |   Fizz   |
+      |   5    |   Buzz   |
+      |   15   | FizzBuzz |
+      |   33   |   Fizz   |
+      |   47   |    47    |
+      |   55   |   Buzz   |
+      |   60   | FizzBuzz |
+      |   145  |   Buzz   |

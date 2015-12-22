@@ -35,6 +35,35 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>1.2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin-jvm-deps</artifactId>
+            <version>1.0.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -55,7 +84,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>src/main/asciidoc</sourceDirectory>
+                            <sourceDirectory>src/main/asciidoc/specifications</sourceDirectory>
                             <backend>html5</backend>
                             <sourceHighlighter>highlightjs</sourceHighlighter>
                             <preserveDirectories>true</preserveDirectories>
@@ -66,6 +95,25 @@
                                 <toclevels>4</toclevels>
                             </attributes>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.cukedoctor</groupId>
+                <artifactId>cukedoctor-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <outputFileName>scenariis</outputFileName>
+                    <outputDir>generated-docs</outputDir>
+                    <toc>left</toc>
+                    <numbered>true</numbered>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <phase>install</phase>
                     </execution>
                 </executions>
             </plugin>
