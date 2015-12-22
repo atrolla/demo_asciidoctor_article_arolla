@@ -1,0 +1,57 @@
+= Projet DEMO - Spécifications Fonctionnelles
+================
+:author:    Yvan VU
+:data-uri:
+:icons: font
+
+== Introduction
+
+=== Objet du document
+
+Le présent document constitue les spécifications fonctionnelles de l'application DEMO.
+
+=== Documents de référence
+
+D'autres documents sont disponibles pour l'application DEMO :
+
+[cols="1,2", options="header"]
+|===
+|Titre
+|Description
+|<<../specifications-techniques/index.adoc#,Spécifications_techniques>>
+|Spécification techniques du projet DEMO
+|===
+
+////
+TODO : mettre le lien vers les documents en question
+|<<specifications_xts.adoc#,Spécifications XTS pour SVI>>
+|Documentation de l'API REST du projet DEMO
+|<<specifications_xts.adoc#,Spécifications XTS pour SVI>>
+|Rapport de scénarii du projet DEMO
+////
+
+<<<
+== Description générale
+
+=== Enjeux
+
+...
+
+<<<
+=== Usage
+
+TIP: ceci est un pro-tip
+
+==== API REST
+
+l'API REST permettra à chaque client d'utiliser l'application via des appels #http#.
+
+==== FizzBuzz
+
+Lorsque l'on appelle le service FizzBuzz, on lui donne en paramètre un entier. Le service retournera alors :
+
+* l'entier passé en paramètre *sauf*
+* si le paramètre est un multiple de *3*, le service retournera *Fizz*
+* si le paramètre est un multiple de *5*, le service retournera *Buzz*
+* si le paramètre est un multiple de *3 et 5*, le service retournera *FizzBuzz*
+

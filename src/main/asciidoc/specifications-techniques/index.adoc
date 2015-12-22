@@ -1,0 +1,20 @@
+= Projet DEMO - Spécifications Techniques
+================
+:author:    Yvan VU
+:data-uri:
+:icons: font
+
+== Introduction
+
+== Description Générale
+
+=== Implémentation de FizzBuzz
+
+[source,java]
+----
+include::{sourceDir}/com/example/domain/FizzBuzz.java[tags=implementation]
+----
+
+=== Usage dans le controller
+
+WARNING: TODO: Pas encore implémenté

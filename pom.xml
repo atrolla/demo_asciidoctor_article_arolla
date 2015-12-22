@@ -57,8 +57,10 @@
                         <configuration>
                             <sourceDirectory>src/main/asciidoc</sourceDirectory>
                             <backend>html5</backend>
+                            <sourceHighlighter>highlightjs</sourceHighlighter>
                             <preserveDirectories>true</preserveDirectories>
                             <attributes>
+                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
                                 <data-uri/>
                                 <toc2/>
                                 <toclevels>4</toclevels>
