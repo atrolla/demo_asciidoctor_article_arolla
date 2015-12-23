@@ -45,7 +45,10 @@ public class FizzBuzzRestTests {
     public void setUp() {
         objectMapper.findAndRegisterModules();
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.context)
-                .apply(documentationConfiguration(this.restDocumentation))
+                .apply(documentationConfiguration(this.restDocumentation).uris()
+                        .withScheme("http")
+                        .withHost("le.serveur.de.prod")
+                        .withPort(8181))
                 .build();
     }
 
