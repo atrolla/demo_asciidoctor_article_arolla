@@ -129,7 +129,7 @@
                 <artifactId>cukedoctor-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <outputFileName>scenariis</outputFileName>
+                    <outputFileName>scenarios</outputFileName>
                     <outputDir>generated-docs</outputDir>
                     <toc>left</toc>
                     <numbered>true</numbered>
